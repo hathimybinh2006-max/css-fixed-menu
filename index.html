@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn tạo Fixed Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        /* 1. Menu cố định trên đầu trang */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed; /* Cố định vị trí của menu */
+            top: 0;          /* Đặt menu ở mép trên cùng */
+            width: 100%;     /* Chiếm toàn bộ chiều rộng màn hình */
+            z-index: 1000;   /* Đảm bảo menu luôn nằm trên các phần tử khác */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .navbar a:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .navbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* 2. Khối nội dung chính có chiều cao lớn để kiểm tra cuộn trang */
+        .main {
+            padding: 25px 40px;
+            margin-top: 60px; /* Cách mép trên để không bị menu che khuất nội dung */
+            height: 1500px;   /* Chiều cao lớn để hiển thị thanh cuộn */
+            background-color: #ffffff;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .main h1 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .main h2 {
+            color: #04AA6D;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .main p {
+            color: #475569;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .demo-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #04AA6D;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Fixed Top Menu</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+        
+        <div class="demo-box">
+            <p><strong>Hiệu ứng Fixed Menu:</strong> Khi bạn cuộn trang web xuống phía dưới, thanh menu màu đen phía trên sẽ không bị trôi mất mà luôn nằm cố định ở đầu màn hình.</p>
+        </div>
+
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+        <p>Some text some text some text some text some text some text some text some text...</p>
+    </div>
+
+</body>
+</html>
